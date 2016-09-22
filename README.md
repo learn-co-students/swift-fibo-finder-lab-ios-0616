@@ -52,4 +52,4 @@ The following should print in your console.
 
 `[0,1,1,2,3,5]`
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ios-fibo-finder' title='Fibonacci Finder'>Fibonacci Finder</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>View <a href='https://learn.co' title='Fibonacci Finder'>Fibonacci Finder</a> on Learn.co and start learning to code for free.</p>
