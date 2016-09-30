@@ -9,31 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        arrayWithFibonacciSequenceToIndex(5)
+        arrayWithFibonacciSequenceToIndex(6)
     }
     
     func arrayWithFibonacciSequenceToIndex(index: Int) -> [Int]{
         
+        var previousNumberFirst = 0
+        var previousNumberSecond = 1
         var fiboArray: [Int] = []
-        var a = 0
-        var b = 1
         
-        if index == 0 {
+        if index >= 0 || !fiboArray.isEmpty {
             fiboArray.append(0)
-        } else if index >= 1 {
-        for _ in 0 ..< index {
-            (a, b) = (b, a + b)
-            fiboArray.append(a)
+            print(fiboArray)
         }
-        print("Array with Fibonacci sequence to index \(index) will be \(fiboArray)")
+        if index == 1 {
+            fiboArray.append(index)
+            print(fiboArray)
+            
         } else {
-            print("The index has negative value.")
+            for _ in 0..<index {
+                let temp = previousNumberFirst
+                previousNumberFirst = previousNumberSecond
+                previousNumberSecond = temp + previousNumberSecond
+                fiboArray.append(previousNumberFirst)
+                print(fiboArray)
+            }
         }
         return fiboArray
     }
-
 }
-
